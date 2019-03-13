@@ -15,3 +15,11 @@ and open the template in the editor.
     height: 100% !important;
 }
 
+
+.buttonGradient{
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+.backgroundUser{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}

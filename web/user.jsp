@@ -13,14 +13,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
-<html>
+<html class="backgroundUser">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Page</title>
         <link rel="stylesheet" href="css.css">
     </head>
-    <body>
-        <div style="float:right">
+    <body class="bg-transparent">
+        <div class="float-right">
             <form name="form1" method="post" action="disconnect.jsp">
               <input class="btn btn-danger" name="submit" type="submit" id="submit" value="Déconnexion">
             </form>
@@ -29,11 +29,34 @@
         <h1>Bienvenue, user</h1>
 
         <hr>
-        <div class="container">
-            <img src="./images/carreABCD.png" alt="carre ABCD" role="presentation" class="img-responsive atto_image_button_text-bottom" width="134" height="121">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+
+                            <!-- form card game -->
+                            <div class="card rounded bg-light text-dark">
+                                <div class="card-header">
+                                    <h3 class="mb-0">Jeu</h3>
+                                </div>
+                                <div class="card-body text-center">
+                                    <img src="./images/carreABCD.png" alt="carre ABCD" role="presentation" class="img-responsive atto_image_button_text-bottom" width="134" height="121">
+                                    <form class="form" action="affichage_jeu.jsp" method="post">
+                                        <div class="form-group">
+                                            <label for="nbparties">Nombre de parties à jouer : </label>
+                                            <input class="form-control form-control-lg rounded" type="number" id="nbparties" name="nbparties" value="5" min="5" max="10" required autofocus/>
+                                        </div>
+                                        <button class="btn buttonGradient" type="submit">Lancer dés</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <%
-
             int i=0,j=0;
             boolean[][] carre = new boolean[2][2];
             carre[0][1]=false;
@@ -42,22 +65,15 @@
             carre[i][j] = true;
             Data test = new Data(carre, i, j);
             session.setAttribute("test", test);
-
             %>
-
-
-            <form action="affichage_jeu.jsp" method="post">
-                <input class="form-control" type="number" name="nbparties" value="5" min="5" max="10" required/>
-                <input type="submit" value="Lancer dé" class="btn btn-primary"/>
-            </form>
 
             <hr>
             <div class="table-responsive">
                 <table class="table table-dark table-bordered ">
                     <thead class="thead thead-dark">
                         <tr>
-                            <th scope="col">partie</th>
-                            <th scope="col">nb de coups<br></th>
+                            <th scope="col"># Partie</th>
+                            <th scope="col">Nombre de coups<br></th>
                         </tr>
                     </thead>
                     <tbody>
