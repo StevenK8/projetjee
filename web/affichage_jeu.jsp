@@ -139,7 +139,7 @@ public char lettreCorrespondante(boolean[][] carre){
                         out.print("<table class=\"table table-dark table-sm table-bordered table-hover\">");
                             out.print("<tbody>");
                                 out.print("<tr>");
-                                    out.print("<th rowspan='2' scope='row' style=\"max-width: 8px;\">"+(Integer.parseInt(request.getParameter("nbparties"))-nbparties+1)+"</td>");
+                                    out.print("<th rowspan='2' scope='row' style=\"max-width: 8px;\">"+("#"+(Integer.parseInt(request.getParameter("nbparties"))-nbparties+1))+"</td>");
                                     out.print("<th scope='row' >dé</th>");
                                     for(int y=0; y<nbcoups; y++){
                                         out.print("<td>"+de[y]+"</td>");

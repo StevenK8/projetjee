@@ -22,7 +22,9 @@
     <body class="bg-transparent">
         <div class="float-right">
             <form name="form1" method="post" action="disconnect.jsp">
-              <input class="btn btn-danger" name="submit" type="submit" id="submit" value="Déconnexion">
+                <button class="btn btn-danger" name="submit" type="submit" id="submit">
+                    <i class="fas fa-sign-out-alt"></i> Déconnexion
+                </button>
             </form>
         </div>
 
@@ -38,7 +40,7 @@
                             <!-- form card game -->
                             <div class="card rounded bg-light text-dark">
                                 <div class="card-header">
-                                    <h3 class="mb-0">Jeu</h3>
+                                    <h3 class="mb-0"><i class="fas fa-gamepad"></i> Jeu</h3>
                                 </div>
                                 <div class="card-body text-center">
                                     <img src="./images/carreABCD.png" alt="carre ABCD" role="presentation" class="img-responsive atto_image_button_text-bottom" width="134" height="121">
@@ -47,7 +49,9 @@
                                             <label for="nbparties">Nombre de parties à jouer : </label>
                                             <input class="form-control form-control-lg rounded" type="number" id="nbparties" name="nbparties" value="5" min="5" max="10" required autofocus/>
                                         </div>
-                                        <button class="btn buttonGradient" type="submit">Lancer dés</button>
+                                        <button class="btn buttonGradient" type="submit">
+                                            <i class="fas fa-dice"></i> Lancer dés
+                                        </button>
                                     </form>
                                 </div>
                             </div>

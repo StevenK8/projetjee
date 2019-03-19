@@ -32,7 +32,7 @@ and open the template in the editor.
                             <!-- form card login -->
                             <div class="card rounded bg-dark text-white">
                                 <div class="card-header">
-                                    <h3 class="mb-0">Connexion</h3>
+                                    <h3 class="mb-0"><i class="fas fa-sign-in-alt"></i> Connexion</h3>
                                 </div>
                                 <div class="card-body">
                                   <form class="form" autocomplete="off" action="./action.jsp" method="post">
